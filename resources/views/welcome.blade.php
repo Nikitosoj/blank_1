@@ -21,7 +21,14 @@
         </style>
     </head>
     <body>
-    <h1 class="bg-gray-100">sadaasdasdasdadsddasdasda</h1>
+    <h1 class="bg-gray-100 m-auto text-center">Welcome page </h1>
+    <div class="w-full text-center grid grid-cols-1">
+        <input inputmode="text" placeholder="richard.hendricks@piedpiper.com" class=" mb-5 mx-auto border-red-700 border-solid border hover:border-sky-500 rounded focus:border focus:border-red-500 " name="login" type="text" >
+        <input inputmode="text" placeholder="richard.hendricks@piedpiper.com" class=" mt-12 mx-auto border-red-700 border-solid border hover:border-sky-500 rounded focus:border focus:border-red-500 " name="login" type="text" >
+    </div>
+    <section class="w-full text-center flex flex-col">
+        <button class="block mx-auto"> Login</button>
+    </section>
     <script src="../js/app.js"></script>
     </body>
 </html>
