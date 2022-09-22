@@ -15,3 +15,8 @@ use App\Http\Controllers\HomeWeb;
 */
 
 Route::get('/', [HomeWeb::class, 'index']);
+
+Route::get('/hellow', function()
+{
+    return view('hellow');}
+);
