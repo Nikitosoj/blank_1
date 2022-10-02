@@ -33,6 +33,15 @@
     <section class="w-full text-center flex flex-col">
         <button onClick="return click()" class="block mx-auto border border-solid border-sky-500 rounded text-2xl hover:border-sky-800 mt-4"> Login</button>
     </section>
+    <ul>
+        @foreach($tasks as $task)
+            <li>
+                {{$task->body}}
+            </li>
+        @endforeach
+    </ul>
+
+
     @vite('resources/js/app.js')
 
     </body>

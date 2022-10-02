@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeWeb;
 
@@ -18,5 +19,12 @@ Route::get('/', [HomeWeb::class, 'index']);
 
 Route::get('/hellow', function()
 {
-    return view('hellow');}
+    $tasks= DB::table('tasks')->get();
+    return view('welcome',compact('tasks'));}
+);
+Route::get('/tasks/{task}', function($id)
+{
+    $task= DB::table('tasks')->find($id);
+    dd($task);
+    return view('welcome',compact('tasks'));}
 );

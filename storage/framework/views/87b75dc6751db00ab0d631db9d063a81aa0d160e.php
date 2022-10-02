@@ -33,6 +33,16 @@
     <section class="w-full text-center flex flex-col">
         <button onClick="return click()" class="block mx-auto border border-solid border-sky-500 rounded text-2xl hover:border-sky-800 mt-4"> Login</button>
     </section>
+    <ul>
+        <?php $__currentLoopData = $tasks; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $task): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <li>
+                <?php echo e($task->body); ?>
+
+            </li>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </ul>
+
+
     <?php echo app('Illuminate\Foundation\Vite')('resources/js/app.js'); ?>
 
     </body>
