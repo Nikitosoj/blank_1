@@ -27,14 +27,15 @@
         </label>
         <p>Password</p>
         <label>
-            <input inputmode="text" placeholder="richard.hendricks@piedpiper.com" class="  mx-auto border-red-700 border-solid border hover:border-sky-500 rounded focus:border focus:border-red-500 " name="login" type="text" >
+            <input inputmode="text" placeholder="**********" class="  mx-auto border-red-700 border-solid border hover:border-sky-500 rounded focus:border focus:border-red-500 " name="login" type="text" >
         </label>
     </div>
     <section class="w-full text-center flex flex-col">
         <button onClick="return click()" class="block mx-auto border border-solid border-sky-500 rounded text-2xl hover:border-sky-800 mt-4"> Login</button>
     </section>
-    <h1 class="text-center pt-12">Tasks:"{{$email = DB::table('tasks')->where('id', '2')->value('body')}} " create at: {{$time = DB::table('tasks')->where('id', '2')->value('created_at')}} </h1>
-
+    @foreach($tasks as $task)
+    <h1 class="text-center pt-12">Tasks:"{{$task ->body}}" </h1>
+    @endforeach
     @vite('resources/js/app.js')
 
     </body>
